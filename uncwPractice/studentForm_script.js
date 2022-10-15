@@ -1,11 +1,34 @@
+document.getElementById("register").style.display = "none";
+
 // Togle between login and registering
-function togle_login() {
+function register_toggle() {
+    var login = document.getElementById("login")
+    var register = document.getElementById("register")
 
+    if (login.style.display === "none") {
+        login.style.display = "block";
+        register.style.display = "none"
+    }
+    else {
+        login.style.display = "none";
+        register.style.display = "block";
+    }
 }
 
-function togle_register() {
+function login_toggle() {
+    var login = document.getElementById("login")
+    var register = document.getElementById("register")
 
+    if (register.style.display === "none") {
+        register.style.display = "block";
+        login.style.display = "none"
+    }
+    else {
+        register.style.display = "none";
+        login.style.display = "block";
+    }
 }
+
 
 // function to validate information provided by student in regestration form
 function validateStudentform() {
