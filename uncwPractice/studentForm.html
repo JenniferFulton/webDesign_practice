@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
-    <script src="studentForm_script.js"></script>
+    <link rel="stylesheet" href="studentForm_script.js">
 </head>
 <body>
     <div id="wrapper">
         <h3>Register to Become a Seahawk a UNCW!</h3>
 
-        <form name="studentForm" onsubmit="return validateStudentform()">
+        <form name="studentForm" action="welcome.html" onsubmit="return validateStudentform()" method="GET">
             <label for="fname">First Name:</label>
             <input type="text" id="fname" name="fname">
 
@@ -43,6 +43,6 @@
         </form>
     </div>
 
-
+    <script src="studentForm_script.js"></script>
 </body>
 </html>
