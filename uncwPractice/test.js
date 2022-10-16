@@ -1,18 +1,8 @@
-var password1 = 1234
-var password2 = 123
-if (JSON.stringify(password1) === JSON.stringify(password2)){
+var bday = "s"
+const date_regex = new RegExp(/^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-]\d{4}$/);
+if (date_regex.test(bday)){
     console.log(true)
 }
-else {
-    console.log(false)
-}
-
-
-var email = "fdsfds"
-const regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
-if (regex.test(email)) {
-    console.log("valid email")
-}
 else{
-    console.log("not valid email")
+    console.log(true)
 }

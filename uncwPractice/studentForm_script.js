@@ -29,32 +29,49 @@ function login_toggle() {
     }
 }
 
-
-// Validate registration form
 function validateStudentform() {
 
+    //name validation
     if (document.getElementById("fname").value == "" || document.getElementById("lname").value == "") {
         alert("Please provide you full name");
         return false
     } 
 
-    const password1 = document.studentForm.password.value;
-    const password2 = document.studentForm.confirmPassword.value;
-    if (JSON.stringify(password1) === JSON.stringify(password2)){
-        //pass
-    }
-    else {
-        alert("Passwords do not match")
+    //address validation
+
+    //city validation
+
+    //zip validation
+
+    //DOB validation
+    if (document.studentForm.bday.value == ""){
+        alert("please enter your birthday")
         return false
     }
 
+    //email validation
     var email = document.studentForm.email.value 
-    const regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
-    if (regex.test(email)) {
-        //pass
+    const email_regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    if (email_regex.test(email)) {
+        
     }
     else{
         alert("please enter a valid email")
+        return false
+    }
+    
+    //password validation
+    const password1 = document.studentForm.password.value;
+    const password2 = document.studentForm.confirmPassword.value;
+    if (password1.length == 0 || password2.length == 0){
+        alert("Please provide a password and confirm it")
+        return false
+    }
+    if (JSON.stringify(password1) === JSON.stringify(password2)){
+        
+    }
+    else {
+        alert("Passwords do not match")
         return false
     }
 
