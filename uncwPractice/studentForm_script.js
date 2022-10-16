@@ -38,8 +38,8 @@ function validateStudentform() {
         return false
     } 
 
-    const password1 = document.getElementById("password").value;
-    const password2 = document.getElementById("confirmPassword").value;
+    const password1 = document.studentForm.password.value;
+    const password2 = document.studentForm.confirmPassword.value;
     if (JSON.stringify(password1) === JSON.stringify(password2)){
         //pass
     }
@@ -48,7 +48,7 @@ function validateStudentform() {
         return false
     }
 
-    var email = document.getElementById("email").value 
+    var email = document.studentForm.email.value 
     const regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     if (regex.test(email)) {
         //pass
