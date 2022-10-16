@@ -38,8 +38,28 @@ function validateStudentform() {
         return false
     } 
 
-    if (document.forms["studentForm"]["lname"].value.length == 0) {
-        alert("Please provide your last name");
+    const password1 = document.getElementById("password").value;
+    const password2 = document.getElementById("confirmPassword").value;
+    if (JSON.stringify(password1) === JSON.stringify(password2)){
+        //pass
+    }
+    else {
+        alert("Passwords do not match")
+        return false
+    }
+
+    var email = document.getElementById("email").value 
+    const regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    if (regex.test(email)) {
+        //pass
+    }
+    else{
+        alert("please enter a valid email")
+        return false
     }
 
 }
+
+
+
+
