@@ -30,7 +30,7 @@ function login_toggle() {
 }
 
 
-// function to validate information provided by student in regestration form
+// Validate registration form
 function validateStudentform() {
 
     if (document.getElementById("fname").value == "" || document.getElementById("lname").value == "") {

@@ -9,6 +9,7 @@
 </head>
 <body>
     <div id="wrapper">
+        <!-- navigation bar -->
         <div class="nav">
             <img class="logo" src="UNC_Wilmington_Seahawks_logo.png" alt="UNCW Seahawks Logo">
             <h3>UNCW Graduate School</h3>
@@ -18,11 +19,13 @@
             <a href="#">Financial Aid</a>
         </div>
 
+        <!-- toggle buttons -->
         <div class="buttons">
             <button onclick="login_toggle()">Login</button>
             <button onclick="register_toggle()">Register</button>
         </div>
 
+        <!-- login form -->
         <div id="login">
             <h3>Login to SeaPort!</h3>
             <form name="loginForm" action="welcome.html" onsubmit="" method="GET">
@@ -36,6 +39,7 @@
             </form>
         </div>
 
+        <!-- registration form -->
         <div id="register">
             <h3>Register to Become a Seahawk a UNCW!</h3>
             <form name="studentForm" action="welcome.html" onsubmit="return validateStudentform()" method="GET">
