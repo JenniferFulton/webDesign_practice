@@ -40,6 +40,15 @@ function validateStudentform() {
     //address validation
 
     //city validation
+    var city = document.studentForm.city.value
+    city_regex = new RegExp(/^[a-zA-Z() ]+$/)
+    if (city_regex.test(city)){
+
+    }
+    else{
+        alert("Enter a Valid City")
+        return false
+    }
 
     //zip validation
     var zip = document.studentForm.zip.value
