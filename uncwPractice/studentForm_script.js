@@ -38,6 +38,10 @@ function validateStudentform() {
     } 
 
     //address validation
+    if (document.studentForm.address.value == ""){
+        alert("Please provide your home address")
+        return false
+    }
 
     //city validation
     var city = document.studentForm.city.value
@@ -88,9 +92,4 @@ function validateStudentform() {
         alert("Passwords do not match")
         return false
     }
-
 }
-
-
-
-
