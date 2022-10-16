@@ -1,8 +1,8 @@
-var bday = "s"
-const date_regex = new RegExp(/^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-]\d{4}$/);
-if (date_regex.test(bday)){
-    console.log(true)
+var zip = "21784"
+if (zip == "" || zip.length != 5 || isNaN(zip)) {
+    console.log(false)
 }
 else{
     console.log(true)
 }
+

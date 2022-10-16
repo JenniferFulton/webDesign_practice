@@ -42,6 +42,11 @@ function validateStudentform() {
     //city validation
 
     //zip validation
+    var zip = document.studentForm.zip.value
+    if (zip == "" || zip.length != 5 || isNaN(zip)) {
+        alert("Please enter a valid zip code")
+        return false
+    }
 
     //DOB validation
     if (document.studentForm.bday.value == ""){
